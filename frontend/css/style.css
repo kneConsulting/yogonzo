@@ -1,0 +1,667 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,300);
+
+body{
+	min-height: 100%;
+	background-color: rgb(255,255,255);
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+}
+
+.main-section{
+	width: 100%;
+	height: 100%;
+
+}
+
+.top-logo-container{
+	margin:auto;
+	width: 100%;
+	height:250px;
+	margin-top: 16px;
+  
+}
+
+.main-logo{
+	width: 234px;
+	height: 205px;
+	/*background-image: url(../images/yogonzo-small-logo.png);*/
+	margin:auto;
+	display: block;
+  /*position: relative;*/
+}
+
+img.ri{
+	position: absolute;
+	max-width: 80%;
+	/*left: 10%;*/
+}
+
+img.ri:empty
+{
+	top: 119px;
+	left: 50%;
+	
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+@media screen and (orientation: portrait) {
+  img.ri {
+      max-width: 90%;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  img.ri {
+      max-height: 90%;
+  }
+}
+
+.main-menu{
+	margin: auto;
+	width: 100%;
+	height: 70px;
+	position: relative;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,300);
+.menu-res {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  font-size: 0.80em;
+  line-height: 15px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.menu-res > ul {
+  width: auto;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background: #ffffff;
+  /*border: 1px solid #ece6e8;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;*/
+}
+.menu-res > ul li.responsive-tab {
+  display: none;
+  z-index: 3000;
+  /* Hide for large screens */
+
+}
+.menu-res > ul li {
+  display: inline-block;
+  /*display: inline;*/
+  zoom: 1;
+}
+/*.menu-res > ul li.right {
+  float: right;
+}*/
+.menu-res > ul li.has-sub {
+  position: relative;
+}
+.menu-res > ul li.has-sub:hover ul {
+  display: block;
+  z-index: 1000;
+}
+.menu-res > ul li.has-sub ul {
+  display: none;
+  width: 250px;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background: #ffffff;
+  border-top: 0 none;
+}
+.menu-res > ul li.has-sub ul li {
+  display: block;
+}
+.menu-res > ul li.has-sub > a {
+  text-align: left;
+  background-repeat: no-repeat;
+  background-position: 90% -95%;
+}
+.menu-res > ul li.has-sub > a.active,
+.menu-res > ul li.has-sub > a:hover {
+  text-align: left;
+  background-position: 90% 195%;
+}
+.menu-res > ul li a {
+  display: block;
+  padding: 12px 24px 11px 24px;
+  text-decoration: none;
+  color: rgb(102,102,102);
+  text-shadow: 0px 1px 0px #fff;
+}
+.menu-res > ul li a.active,
+.menu-res > ul li a:hover {
+  color: rgb(201,201,201);
+}
+@media (max-width: 600px) {
+  .menu-res > ul {
+    width: 100%;
+  }
+  .menu-res > ul li.responsive-tab {
+    display: block;
+    text-align: left;
+    z-index: 3000;
+  }
+  .menu-res > ul li.responsive-tab a {
+    background: url(../images/menu.png) no-repeat;
+    background-position: 85% -35%;
+    z-index: 3000;
+  }
+  .menu-res > ul li.responsive-tab a:hover {
+    background-position: 85% 132%;
+    z-index: 3000;
+  }
+  .menu-res > ul li {
+    display: none;
+  }
+  .menu-res > ul li.right {
+    float: none;
+  }
+  .menu-res > ul li.has-sub {
+    position: relative;
+  }
+  .menu-res > ul li.has-sub ul {
+    display: block;
+    position: static;
+    width: 100%;
+    background: #ffffff;
+    border: 0 none;
+    z-index: 2000;
+  }
+  .menu-res> ul li.has-sub ul li {
+    display: block !important;
+  }
+  .menu-res > ul li.has-sub ul li a span {
+    display: block;
+    padding-left: 24px;
+  }
+  .menu-res > ul li.has-sub > a {
+    background-image: none;
+  }
+}
+
+@media (min-width: 600px) {
+  .menu-res > ul > li.collapsed {
+    display: inline-block !important;
+    display: inline;
+    zoom: 1;
+  }
+  .menu-res > ul ul li.collapsed {
+    display: block !important;
+  }
+}
+
+.photo-section{
+  margin: auto;
+  max-width:1000px;
+  height: 750px;
+  
+}
+
+.footer-division-box{
+  width: 100%;
+}
+
+.footer-division{
+  margin: auto;
+  max-width: 1000px;
+  border-bottom: 1px solid rgb(187,187,187);
+  padding-top: 45px;
+}
+
+.button-box{
+  width: 100%;
+  padding-top: 45px;
+  margin: auto;
+  padding-bottom: 100px;
+
+}
+
+.button-box .book-button{
+  width: 127px;
+  height: 41px;
+  text-transform: uppercase;
+  background-color: rgb(39,39,39);
+  color: #ffffff;
+  text-align: center;
+  line-height: 42px;
+  font-size: .85em;
+  text-decoration: none;
+  display: block;
+  /*border-radius: 4px;*/
+  margin:auto;
+  border-radius: 4px;
+  /*left:25%;
+  width:20%;
+  height:50%;
+  top:25%;*/
+  box-sizing:border-box;
+}
+
+/******************************************************************************/
+/*ABOUT PAGE*/
+/******************************************************************************/
+
+.about-section{
+  width: 100%;
+}
+
+.about-text{
+	margin:auto;
+	width: 75%;
+  overflow: hidden;
+  min-height: 200px;
+  box-sizing:border-box;
+}
+
+.about-text p{
+	font-size: 0.875em;
+  line-height: 2.2em;
+  text-align: center;
+}
+
+/******************************************************************************/
+/*CONTACT PAGE*/
+/******************************************************************************/
+
+.TTWForm{
+    width: 80%;
+    margin: auto;
+}
+ 
+ 
+.TTWForm-container {
+  width: 100%;
+  margin:auto;
+    font-size: 75%;
+    color: #222;
+    background: #fff;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+ 
+.TTWForm-container h2 {
+    font-size: 2em;
+    margin-bottom: 0.75em;
+    color: #333333;
+    font-weight: normal;
+}
+ 
+/** Field Styles **/
+.TTWForm .field, #form-title.field {
+    padding-bottom: 12px;
+    padding-top: 12px;
+    position: relative;
+    clear: both;
+}
+ 
+/** Field Widths */
+.f_25 {
+    width: 21%;
+    display: inline;
+    float: left;
+    margin-left: 2%;
+    margin-right: 2%; 
+}
+ 
+.f_50 {
+    width: 46%;
+    display: inline;
+    float: left;
+    margin-left: 2%;
+    margin-right: 2%; 
+}
+ 
+.f_75 {
+    width: 71%;
+    display: inline;
+    float: left;
+    margin-left: 2%;
+    margin-right: 2%; 
+}
+ 
+.f_100 {
+    width: 96%;
+    display: inline;
+    float: left;
+    margin-left: 2%;
+    margin-right: 2%; 
+}
+ 
+.TTWForm input, .TTWForm textarea {
+    width: 100%;
+    font: 16px/24px Helvetica Neue, "Arial", Helvetica, Verdana, sans-serif;
+ 
+    outline: none;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    background: #EDEDED; /* old browsers */
+    background: -moz-linear-gradient(top, #EDEDED 0%, #FCFCFC 10%, #FCFCFC 90%, #EDEDED 100%); /* firefox */
+ 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #EDEDED), color-stop(10%, #FCFCFC), color-stop(90%, #FCFCFC), color-stop(100%, #EDEDED)); /* webkit */
+ 
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#EDEDED', endColorstr = '#EDEDED', GradientType = 0); /* ie */
+    border: 1px solid #ccc;
+    -moz-border-radius: 3px;
+    padding: 3px 0;
+}
+ 
+.TTWForm input:focus, .TTWForm textarea:focus, .TTWForm select:focus {
+    -webkit-box-shadow: 0px 0px 5px #bfdeff;
+    -moz-box-shadow: 0px 0px 5px #bfdeff;
+    box-shadow: 0px 0px 5px #bfdeff;
+}
+ 
+.TTWForm input[type=radio], .TTWForm input[type=checkbox] {
+    width: 12px;
+    margin: 8px 12px;
+    top: 3px;
+    position: relative;
+}
+ 
+.TTWForm .option {
+    margin: 6px 0;
+}
+ 
+.TTWForm select {
+    padding: 6px 6px;
+}
+ 
+.TTWForm textarea {
+    overflow: hidden;
+}
+ 
+.TTWForm label {
+    color: #666;
+    text-align: left;
+    font: 16px/24px Helvetica Neue, "Arial", Helvetica, Verdana, sans-serif;
+}
+ 
+.TTWForm .submit input {
+    text-align: center;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    text-shadow: 1px 1px 0px #fff;
+    display: block;
+    margin: 12px -2px 12px 0;
+    text-align: center;
+    float: right;
+    padding: 6px 3px;
+    height: 36px;
+    cursor: pointer;
+    min-width: 96px;
+    width: auto;
+    background: #FBFBFB; /* old browsers */
+    background: -moz-linear-gradient(top, #FBFBFB 0%, #EEEEEE 99%); /* firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FBFBFB), color-stop(99%, #EEEEEE)); /* webkit */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#FBFBFB', endColorstr = '#EEEEEE', GradientType = 0); /* ie */
+    border: 1px solid #cfcfcf;
+    font-weight: bold;
+    color: #666;
+}
+ 
+#form-title {
+    padding: 12px;
+}
+ 
+#form-title h2 {
+    margin-bottom: 0;
+}
+ 
+/** Date Input **/
+ 
+#calroot {
+    z-index: 10000;
+    margin-top: -1px;
+    width: 198px;
+    padding: 2px;
+    background-color: #fff;
+    font-size: 11px;
+    border: 1px solid #ccc;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: 0 0 15px #666;
+    -webkit-box-shadow: 0 0 15px #666;
+}
+ 
+#calhead {
+    padding: 2px 0;
+    height: 22px;
+}
+ 
+#caltitle {
+    font-size: 14px;
+    color: #0150D1;
+    float: left;
+    text-align: center;
+    width: 155px;
+    line-height: 20px;
+    text-shadow: 0 1px 0 #ddd;
+}
+ 
+#calnext, #calprev {
+    display: block;
+    width: 20px;
+    height: 20px;
+    float: left;
+    cursor: pointer;
+    background: transparent url(../images/prev.png) no-repeat center center scroll;
+}
+ 
+#calnext {
+    float: right;
+    background: transparent url(../images/next.png) no-repeat center center scroll;
+}
+ 
+#calprev.caldisabled, #calnext.caldisabled {
+    visibility: hidden;
+}
+ 
+#caltitle select {
+    font-size: 10px;
+}
+ 
+#caldays {
+    height: 14px;
+    border-bottom: 1px solid #ddd;
+}
+ 
+#caldays span {
+    display: block;
+    float: left;
+    width: 28px;
+    text-align: center;
+}
+ 
+#calweeks {
+    background-color: #fff;
+    margin-top: 4px;
+}
+ 
+.calweek {
+    clear: left;
+    height: 22px;
+}
+ 
+.calweek a {
+    display: block;
+    float: left;
+    width: 27px;
+    height: 20px;
+    text-decoration: none;
+    font-size: 11px;
+    margin-left: 1px;
+    text-align: center;
+    line-height: 20px;
+    color: #666;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+ 
+.calweek a:hover, .calfocus {
+    background-color: #ddd;
+}
+ 
+a.calsun {
+    color: red;
+}
+ 
+a.caloff {
+    color: #ccc;
+}
+ 
+a.caloff:hover {
+    background-color: rgb(245, 245, 250);
+}
+ 
+a.caldisabled {
+    background-color: #efefef !important;
+    color: #ccc !important;
+    cursor: default;
+}
+ 
+#calcurrent {
+    background-color: #498CE2;
+    color: #fff;
+}
+ 
+#caltoday {
+    background-color: #333;
+    color: #fff;
+}
+ 
+/** Range Input **/
+ 
+.slider {
+    background: #3C72E6 url(../images/range_gradient.png) repeat-x 0 0;
+    height: 9px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #333;
+    width: 100%;
+    float: left;
+    clear: right;
+    margin-top: 10px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: inset 0 0 8px #000;
+}
+ 
+.progress {
+    height: 9px;
+    background-color: #C5FF00;
+    display: none;
+    opacity: 0.6;
+}
+ 
+.handle {
+    background: #fff url(../images/range_gradient.png) repeat-x 0 0;
+    height: 28px;
+    width: 28px;
+    top: -12px;
+    position: absolute;
+    display: block;
+    margin-top: 1px;
+    border: 1px solid #000;
+    cursor: move;
+    -moz-box-shadow: 0 0 6px #000;
+    -webkit-box-shadow: 0 0 6px #000;
+    -moz-border-radius: 14px;
+    -webkit-border-radius: 14px;
+ 
+}
+ 
+.range {
+    border: 1px solid #ddd;
+    float: left;
+    font-size: 20px;
+    margin: 0 0 0 15px;
+    padding: 3px 0;
+    text-align: center;
+    width: 50px !important;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+ 
+/** Clearfix */
+.clearfix:after {
+    clear: both;
+    content: ' ';
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+ 
+/*
+    The following zoom:1 rule is specifically for IE6 + IE7.
+    Move to separate stylesheet if invalid CSS is a problem.
+*/
+* html .clearfix,
+*:first-child+html .clearfix {
+    zoom: 1;
+}
+
+/*ERROR MESSAGE*/
+
+.mensagemErro
+{
+  border: 2px #ff0000 solid;
+  color: #ffffff;
+  font-weight: bold;
+  /*min-height: 25px;*/
+  font-size: 0.7em;
+  line-height: 25px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  width:100px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: none;
+}
+
+.mensagemErro.certo
+{
+  border-color: green;
+}
+.mensagemErro.erro
+{
+  border-color: red;
+}
+.mensagemErro.aviso
+{
+  border-color: #ffb400;
+}
+
+/******************************************************************************/
+/*EVENTS PAGE*/
+/******************************************************************************/
+
+.events-section{
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
