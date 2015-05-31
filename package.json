@@ -2,7 +2,7 @@
   "name": "yogonzo.dev",
   "version": "1.0.0",
   "description": "yogonzo codebase",
-  "main": "index.html",
+  "main": "index.php",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

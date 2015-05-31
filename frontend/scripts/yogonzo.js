@@ -8,7 +8,7 @@ $(document).ready(function () {
             }
         }
     }); 
-	
+    
     $(".dropdown li").hover(function(){
     
         $(this).addClass("hover");
@@ -22,17 +22,17 @@ $(document).ready(function () {
     });
 
     var menu = $('.menu-res');
-	var menuList = menu.find('ul:first');
-	var listItems = menu.find('li').not('.responsive-tab');
+    var menuList = menu.find('ul:first');
+    var listItems = menu.find('li').not('.responsive-tab');
 
-	// Responsive trigger
-	menuList.prepend('<li class="responsive-tab"><a href="#">Menu</a></li>');
+    // Responsive trigger
+    menuList.prepend('<li class="responsive-tab"><a href="#">Menu</a></li>');
 
-	// Toggle menu visibility
-	menu.on('click', '.responsive-tab', function(){
-		listItems.slideToggle('fast');
-		listItems.addClass('collapsed');
-	});
+    // Toggle menu visibility
+    menu.on('click', '.responsive-tab', function(){
+        listItems.slideToggle('fast');
+        listItems.addClass('collapsed');
+    });
 
     //===================================================================
     // ROYAL SLIDER
@@ -106,12 +106,11 @@ $(document).ready(function () {
             $('.mensagemErro').fadeIn();
         }
         
-        // verifica se o email é válido, se for inválido entra no if pelo !
         if(!isEmailValid(userEmail))
         {
             estado = false;
             $('.mensagemErro').addClass('erro');
-            $('.mensagemErro').text("Email Invalid");
+            $('.mensagemErro').text("Invalid Email");
             $('.mensagemErro').fadeIn();
         }
         
@@ -138,6 +137,8 @@ $(document).ready(function () {
 
                 }
                 $('.mensagemErro').text(msg.mensagem).fadeIn();
+                $('.mensagemErro').text(msg.mensagem).fadeOut(5000);
+
                 
             });
         }
