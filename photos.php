@@ -75,6 +75,7 @@
 		</style>
 	</head>
 	<body>
+		<?php include_once("frontend/inc/analyticstracking.php") ?>
 		<section class="main-section">
 
 		<?php include("frontend/inc/main-logo-main-header.php"); ?>
@@ -159,8 +160,9 @@
 			        </div>
 			    </div>
 			</div>
+			<?php include("frontend/inc/social-icons.php"); ?>
 		</section>
-		<?php include("frontend/inc/social-icons.php"); ?>
+		
 	<!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>

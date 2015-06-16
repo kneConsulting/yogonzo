@@ -9,6 +9,7 @@
       <?php include("frontend/inc/yogonzo-links.php"); ?>
   </head>
   <body>
+    <?php include_once("frontend/inc/analyticstracking.php") ?>
         <section class="main-section">
 
           <?php include("frontend/inc/main-logo-main-header.php"); ?>
@@ -23,7 +24,6 @@
 
 <!-- S C R I P T S -->
 
-<?php include_once("analyticstracking.php") ?>
 <?php include("frontend/inc/yogonzo-scripts.php"); ?>
         
   </body>

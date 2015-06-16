@@ -48,6 +48,7 @@ $page_title = "Events";
       </style>
   </head>
   <body>
+    <?php include_once("frontend/inc/analyticstracking.php") ?>
     <section class="main-section">
 
       <?php include("frontend/inc/main-logo-main-header.php"); ?>
