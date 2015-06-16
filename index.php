@@ -36,6 +36,8 @@
     </section>
 
     <!-- S C R I P T S -->
+
+    <?php include_once("analyticstracking.php") ?>
     <?php include("frontend/inc/yogonzo-scripts.php"); ?>
         
   </body>

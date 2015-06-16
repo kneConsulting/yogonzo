@@ -89,6 +89,7 @@ $page_title = "Events";
       <?php include("frontend/inc/social-icons.php"); ?>
     </section>
 
+    
     <!-- S C R I P T S -->
     <?php include("frontend/inc/yogonzo-scripts.php"); ?>
 
@@ -110,6 +111,7 @@ $page_title = "Events";
         }
       });
     };
-    </script>       
+    </script>      
+
   </body>
 </html>
