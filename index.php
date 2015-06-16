@@ -30,6 +30,8 @@
       <div class="button-box">
         <a href="contact.php" class="book-button ra">Book Now</a>
       </div> 
+
+      <?php include("frontend/inc/social-icons.php"); ?>
         
     </section>
 

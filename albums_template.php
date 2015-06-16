@@ -22,7 +22,7 @@ for($x=0; $x<$album_count; $x++){
 	}
 	
 	if(empty($description)){
-		$description="No description.";
+		$description="";
 	}else{
 		if(strlen($description)>80){
 			$description=substr(strip_tags($util->getNewStringWithMentions($description)),0,80) . "...";

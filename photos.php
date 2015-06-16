@@ -95,9 +95,9 @@
 						echo "{$album_photos_count} Photos. {$album_likes_count} Likes. {$album_comments_count} Comments. <a href='{$album_link}' target='_blank'>View album on Facebook.</a>";
 					echo "</p>";
 
-					echo "<p>";
-						echo "{$album_description}";
-					echo "</p>";
+					// echo "<p>";
+					// 	echo "{$album_description}";
+					// echo "</p>";
 					
 					
 					// get photos
@@ -160,7 +160,7 @@
 			    </div>
 			</div>
 		</section>
-
+		<?php include("frontend/inc/social-icons.php"); ?>
 	<!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -189,7 +189,7 @@
 			}
 			
 			if(data==""){
-				$('div#last_item_loader').html("All photos were loaded.");
+				$('div#last_item_loader').html(" ");
 			}else{
 				$('div#last_item_loader').empty();
 			}

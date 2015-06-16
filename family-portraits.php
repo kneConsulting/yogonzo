@@ -13,6 +13,15 @@
 
       <?php include("frontend/inc/main-logo-main-header.php"); ?>
 
+        <div class="display-pics-container">
+        <div class="portrait-pics">
+          <img class="portrait-position" src="frontend/contents/family-portraits-1.png">
+          <img class="portrait-position" src="frontend/contents/family-portraits-2.png">
+          <img class="portrait-position" src="frontend/contents/family-portraits-3.png">
+          <img class="portrait-position" src="frontend/contents/family-portraits-4.png">
+        </div>
+      </div>
+      <?php include("frontend/inc/social-icons.php"); ?>
     </section>
 
     <!-- S C R I P T S -->

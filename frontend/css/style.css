@@ -9,7 +9,6 @@ body{
 .main-section{
   width: 100%;
   height: 100%;
-
 }
 
 .top-logo-container{
@@ -649,6 +648,42 @@ a.caldisabled {
 
 .events-section{
   width: 100%;
+}
+
+/******************************************************************************/
+/*PORTRAITS & FAMILY PORTRAITS PAGE*/
+/******************************************************************************/
+
+.display-pics-container{
+  max-width:1000px;
+  margin: auto;
+}
+
+.portrait-position{
+  margin-bottom: 30px;
+}
+
+.social-icons{
+  width: 100%;
+  padding-top: 45px;
+  margin: auto;
+  padding-bottom: 45px;
+}
+
+.social-block{
+  margin: auto;
+  text-decoration: none;
+  text-transform: none;
+  text-align: center;
+}
+
+.social-block a{
+  color: rgb(153,153,153);
+}
+
+.social-block a:hover{
+  text-decoration: none;
+  color:rgb(124,124,124);
 }
 
 

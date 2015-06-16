@@ -86,6 +86,7 @@ $page_title = "Events";
           ?>
         </div>
       </div>
+      <?php include("frontend/inc/social-icons.php"); ?>
     </section>
 
     <!-- S C R I P T S -->
@@ -102,7 +103,7 @@ $page_title = "Events";
         }
     
         if(data==""){
-          $('div#last_item_loader').html("All photo albums were loaded.");
+          $('div#last_item_loader').html(" ");
 
         }else{
           $('div#last_item_loader').empty();
