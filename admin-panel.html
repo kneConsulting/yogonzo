@@ -5,7 +5,7 @@
   <style type="text/css">
     .sessions {
       width: 100%;
-      height:700px;
+      height: 300px;
     }
 
     .inner-sessions{
@@ -26,6 +26,19 @@
       float: left;
       padding-left: 50px;
     }
+
+    #operating-sys{
+      margin: auto;
+      float: left;
+      padding-left: 30px;
+    }
+
+    #browser{
+      margin: auto;
+      float: left;
+      padding-left: 50px;
+    }
+
   </style>
 </head>
 <body>
@@ -42,6 +55,14 @@
     <div id="timeline2"></div>
   </div>
 </section>
+
+<section class="sessions">
+  <div class="inner-sessions">
+    <div id="operating-sys"></div>
+    <div id="browser"></div>
+  </div>
+</section>
+
 
 <!-- Step 2: Load the library. -->
 
@@ -72,6 +93,7 @@ gapi.analytics.ready(function() {
     container: 'view-selector'
   });
 
+
   // Step 5: Create the timeline chart.
 
   var timeline = new gapi.analytics.googleCharts.DataChart({
@@ -86,7 +108,7 @@ gapi.analytics.ready(function() {
       type: 'LINE',
       container: 'timeline',
       options: {
-        title: 'Last Week'
+        title: 'User Sessions In Last Week'
       }
     }
   });
@@ -103,7 +125,41 @@ gapi.analytics.ready(function() {
       type: 'LINE',
       container: 'timeline2',
       options: {
-        title: 'Last Month'
+        title: 'User Sessions In Last Month'
+      }
+    }
+  });
+
+  var osChart = new gapi.analytics.googleCharts.DataChart({
+    reportType: 'ga',
+    query: {
+      'dimensions': 'ga:operatingSystem',
+      'metrics': 'ga:sessions',
+      'start-date': '30daysAgo',
+      'end-date': 'yesterday',
+    },
+    chart: {
+      type: 'BAR',
+      container: 'operating-sys',
+      options: {
+        title: 'Operating Systems used to access YoGonzo last month'
+      }
+    }
+  });
+
+  var browserChart = new gapi.analytics.googleCharts.DataChart({
+    reportType: 'ga',
+    query: {
+      'dimensions': 'ga:browser',
+      'metrics': 'ga:sessions',
+      'start-date': '30daysAgo',
+      'end-date': 'yesterday',
+    },
+    chart: {
+      type: 'BAR',
+      container: 'browser',
+      options: {
+        title: 'Browsers used to access YoGonzo last month'
       }
     }
   });
@@ -122,7 +178,10 @@ gapi.analytics.ready(function() {
     }
     timeline.set(newIds).execute();
     timeline2.set(newIds).execute();
+    osChart.set(newIds).execute();
+    browserChart.set(newIds).execute();
   });
+
 });
 </script>
 </body>
