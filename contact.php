@@ -22,27 +22,27 @@
                  novalidate="">
                                   
           <div id="field1-container" class="field f_100 ui-resizable-disabled ui-state-disabled">
-            <label for="field1">First Name*</label>          
+            <label for="field1">First Name *</label>          
             <input type="text" name="field1" id="field1" required="required">
           </div>
                         
           <div id="field4-container" class="field f_100 ui-resizable-disabled ui-state-disabled">
-            <label for="field4">Last Name*</label>          
+            <label for="field4">Last Name *</label>          
             <input type="text" name="field4" id="field4" required="required">
           </div>
                           
           <div id="field5-container" class="field f_100 ui-resizable-disabled ui-state-disabled">
-            <label for="field5">Email*</label>
+            <label for="field5">Email *</label>
             <input type="email" name="field5" id="field5" required="required">
           </div>
                                    
           <div id="field6-container" class="field f_100 ui-resizable-disabled ui-state-disabled">
-            <label for="field6">Message*</label>
+            <label for="field6">Message *</label>
             <textarea rows="5" cols="20" name="field6" id="field6" required="required"></textarea>
           </div>
                        
           <div id="form-submit" class="field f_100 clearfix submit">
-            <input type="submit" value="Submit">
+            <input type="submit" value="SUBMIT">
           </div>
 
         </form>
