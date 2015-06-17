@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Embed API Demo</title>
+  <style type="text/css">
+    .sessions {
+      width: 100%;
+      height:700px;
+    }
+
+    .inner-sessions{
+      margin: auto;
+      display: block;
+      /*width: 60%;*/
+      height: 100%;
+    }
+
+    #timeline{
+      margin: auto;
+      float: left;
+      padding-left: 30px;
+    }
+
+    #timeline2{
+      margin: auto;
+      float: left;
+      padding-left: 50px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Step 1: Create the containing elements. -->
+
+<section id="auth-button"></section>
+<section id="view-selector"></section>
+
+
+<section class="sessions">
+  <div class="inner-sessions">
+    <div id="timeline"></div>
+    <div id="timeline2"></div>
+  </div>
+</section>
+
+<!-- Step 2: Load the library. -->
+
+<script>
+(function(w,d,s,g,js,fjs){
+  g=w.gapi||(w.gapi={});g.analytics={q:[],ready:function(cb){this.q.push(cb)}};
+  js=d.createElement(s);fjs=d.getElementsByTagName(s)[0];
+  js.src='https://apis.google.com/js/platform.js';
+  fjs.parentNode.insertBefore(js,fjs);js.onload=function(){g.load('analytics')};
+}(window,document,'script'));
+</script>
+
+<script>
+gapi.analytics.ready(function() {
+
+  // Step 3: Authorize the user.
+
+  var CLIENT_ID = '147508487728-sedqbsvfhj259k7093qhg392g4l7hr45.apps.googleusercontent.com';
+
+  gapi.analytics.auth.authorize({
+    container: 'auth-button',
+    clientid: CLIENT_ID,
+  });
+
+  // Step 4: Create the view selector.
+
+  var viewSelector = new gapi.analytics.ViewSelector({
+    container: 'view-selector'
+  });
+
+  // Step 5: Create the timeline chart.
+
+  var timeline = new gapi.analytics.googleCharts.DataChart({
+    reportType: 'ga',
+    query: {
+      'dimensions': 'ga:date',
+      'metrics': 'ga:sessions',
+      'start-date': '7daysAgo',
+      'end-date': 'yesterday',
+    },
+    chart: {
+      type: 'LINE',
+      container: 'timeline',
+      options: {
+        title: 'Last Week'
+      }
+    }
+  });
+
+  var timeline2 = new gapi.analytics.googleCharts.DataChart({
+    reportType: 'ga',
+    query: {
+      'dimensions': 'ga:date',
+      'metrics': 'ga:sessions',
+      'start-date': '30daysAgo',
+      'end-date': 'yesterday',
+    },
+    chart: {
+      type: 'LINE',
+      container: 'timeline2',
+      options: {
+        title: 'Last Month'
+      }
+    }
+  });
+
+  // Step 6: Hook up the components to work together.
+
+  gapi.analytics.auth.on('success', function(response) {
+    viewSelector.execute();
+  });
+
+  viewSelector.on('change', function(ids) {
+    var newIds = {
+      query: {
+        ids: ids
+      }
+    }
+    timeline.set(newIds).execute();
+    timeline2.set(newIds).execute();
+  });
+});
+</script>
+</body>
+</html>
