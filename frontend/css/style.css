@@ -264,6 +264,37 @@ img.ri:empty
   text-align: center;
 }
 
+.sneaky-button{
+  bottom: 0px;
+  right:0px;
+  width: 170px;
+  height: 45px;
+  position: fixed;
+  background-color: white;
+  z-index: 10;
+}
+
+.admin-button{
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  font-size: 15px;
+  margin: 0 10px 10px 0px;
+  /*box-sizing:border-box;*/
+  border: 2px solid rgb(39,39,39);
+  border-radius: 4px;
+  padding: 4px;
+  color: rgb(39,39,39);
+}
+
+.admin-button:hover{
+  color: red;
+  border: 2px solid red;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+
 /******************************************************************************/
 /*CONTACT PAGE*/
 /******************************************************************************/
@@ -696,7 +727,7 @@ a.caldisabled {
 
 .social-block a{
   color: rgb(153,153,153);
-  font-size: 20px;
+  font-size: 1.5em;
 }
 
 .social-block a:hover{

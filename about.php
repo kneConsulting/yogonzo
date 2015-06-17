@@ -22,6 +22,13 @@
             <?php include("frontend/inc/social-icons.php"); ?>
         </section>
 
+        <div class="sneaky-button"></div>
+        <a href="admin-panel.php">
+          <div class="admin-button">
+            <span>Administrator Access</span>
+          </div>
+        </a>
+
 <!-- S C R I P T S -->
 
 <?php include("frontend/inc/yogonzo-scripts.php"); ?>

@@ -145,6 +145,11 @@ $(document).ready(function () {
 
     });
 
+    $('.sneaky-button').click(function(){
+        $('.sneaky-button').fadeOut(500);
+        $('.auth-button').fadeIn();
+    });
+
 
 });
     
