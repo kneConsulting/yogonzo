@@ -39,6 +39,18 @@
       padding-left: 50px;
     }
 
+    #avgSeshDuration{
+      margin: auto;
+      float: left;
+      padding-left: 30px;
+    }
+
+    #bounce{
+      margin: auto;
+      float: left;
+      padding-left: 50px;
+    }
+
   </style>
 </head>
 <body>
@@ -48,6 +60,7 @@
 <section id="auth-button"></section>
 <section id="view-selector"></section>
 
+<a href="index.php" onclick="signOut();">Sign out</a>
 
 <section class="sessions">
   <div class="inner-sessions">
@@ -60,6 +73,20 @@
   <div class="inner-sessions">
     <div id="operating-sys"></div>
     <div id="browser"></div>
+  </div>
+</section>
+
+<section class="sessions">
+  <div class="inner-sessions">
+    <div id="avgSeshDuration"></div>
+    <div id="bounce"></div>
+  </div>
+</section>
+
+<section class="sessions">
+  <div class="inner-sessions">
+    <div id="gender"></div>
+    <div id="age"></div>
   </div>
 </section>
 
@@ -164,6 +191,74 @@ gapi.analytics.ready(function() {
     }
   });
 
+  var seshDuration = new gapi.analytics.googleCharts.DataChart({
+    reportType: 'ga',
+    query: {
+      'dimensions': 'ga:date',
+      'metrics': 'ga:avgSessionDuration',
+      'start-date': '30daysAgo',
+      'end-date': 'yesterday',
+    },
+    chart: {
+      type: 'LINE',
+      container: 'avgSeshDuration',
+      options: {
+        title: 'Average Session Duration per day'
+      }
+    }
+  });
+
+  var bounceRate = new gapi.analytics.googleCharts.DataChart({
+    reportType: 'ga',
+    query: {
+      'dimensions': 'ga:date',
+      'metrics': 'ga:bounceRate',
+      'start-date': '30daysAgo',
+      'end-date': 'yesterday',
+    },
+    chart: {
+      type: 'LINE',
+      container: 'bounce',
+      options: {
+        title: 'Daily Bounce Rate'
+      }
+    }
+  });
+
+  var gender = new gapi.analytics.googleCharts.DataChart({
+    reportType: 'ga',
+    query: {
+      'dimensions': 'ga:userGender',
+      'start-date': '365daysAgo',
+      'end-date': 'yesterday',
+    },
+    chart: {
+      type: 'BAR',
+      container: 'gender',
+      options: {
+        title: 'Gender of Users'
+      }
+    }
+  });
+
+ var age = new gapi.analytics.googleCharts.DataChart({
+    reportType: 'ga',
+    query: {
+      'dimensions': 'ga:userAgeBracket',
+      'start-date': '365daysAgo',
+      'end-date': 'yesterday',
+    },
+    chart: {
+      type: 'BAR',
+      container: 'age',
+      options: {
+        title: 'Age of Users'
+      }
+    }
+  });
+
+
+
   // Step 6: Hook up the components to work together.
 
   gapi.analytics.auth.on('success', function(response) {
@@ -180,9 +275,24 @@ gapi.analytics.ready(function() {
     timeline2.set(newIds).execute();
     osChart.set(newIds).execute();
     browserChart.set(newIds).execute();
+    seshDuration.set(newIds).execute();
+    bounceRate.set(newIds).execute();
+    age.set(newIds).execute();
+    gender.set(newIds).execute();
   });
 
 });
 </script>
+
+<script>
+  function signOut()
+  {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+</script>
+
 </body>
 </html>
