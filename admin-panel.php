@@ -1,3 +1,6 @@
+<?php
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,6 +54,7 @@
       padding-left: 50px;
     }
 
+
   </style>
 </head>
 <body>
@@ -60,7 +64,13 @@
 <section id="auth-button"></section>
 <section id="view-selector"></section>
 
-<a href="index.php" onclick="signOut();">Sign out</a>
+<br>
+<br>
+
+<a href="index.php" id="return" style="text-decoration:none"><font color="gray" face="helvetica">Return to YoGonzo</font></a>
+
+<br>
+<br>
 
 <section class="sessions">
   <div class="inner-sessions">
@@ -114,6 +124,7 @@ gapi.analytics.ready(function() {
     clientid: CLIENT_ID,
   });
 
+  //document.write('<a href="index.php" onclick="signOut();">Sign out</a>');
   // Step 4: Create the view selector.
 
   var viewSelector = new gapi.analytics.ViewSelector({
@@ -282,16 +293,6 @@ gapi.analytics.ready(function() {
   });
 
 });
-</script>
-
-<script>
-  function signOut()
-  {
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-      console.log('User signed out.');
-    });
-  }
 </script>
 
 </body>
