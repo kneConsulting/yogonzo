@@ -654,6 +654,11 @@ a.caldisabled {
   border-color: #ffb400;
 }
 
+.extra-bottom-space{
+  min-height: 600px;
+  width: 100%;
+}
+
 /******************************************************************************/
 /*EVENTS PAGE*/
 /******************************************************************************/
@@ -691,6 +696,7 @@ a.caldisabled {
 
 .social-block a{
   color: rgb(153,153,153);
+  font-size: 20px;
 }
 
 .social-block a:hover{

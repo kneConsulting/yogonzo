@@ -49,6 +49,9 @@
     
       </div>
 
+      <div class="extra-bottom-space"></div>
+      <?php include("frontend/inc/social-icons.php"); ?>
+
     </section>
     
 
